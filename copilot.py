@@ -33,8 +33,8 @@ class Copilot:
                         )
         
         self.system_prompt = """
-            You are an expert on Columbia University and your job is to answer questions 
-            about the university.
+            You are an expert on US Tax Code and your job is to answer questions 
+            about the code.
         """
 
     def ask(self, question, messages, openai_key=None):
@@ -52,8 +52,8 @@ class Copilot:
 
             The retrived information is: {retrieved_info}
 
-            Please answer the question based on the retrieved information. If the question is not related to Columbia University, 
-            please tell the user and ask for a question related to Columbia University.
+            Please answer the question based on the retrieved information. If the question is not related to US Tax Code, 
+            please tell the user and ask for a question related to US Tax Code.
 
             Please highlight the information with bold text and bullet points.
         """
@@ -71,12 +71,13 @@ class Copilot:
 if __name__ == "__main__":
     ### get openai key from user input
     openai_api_key = os.getenv("OPENAI_API_KEY")
+    
     if not openai_api_key:
         openai_api_key = input("Please enter your OpenAI API Key (or set it as an environment variable OPENAI_API_KEY): ")
     copilot = Copilot()
     messages = []
     while True:
-        question = input("Please ask a question: ")
+        question = input("Please ask a question related to U.S. Code: ")
         retrived_info, answer = copilot.ask(question, messages=messages, openai_key=openai_api_key)
         ### answer can be a generator or a string
 
