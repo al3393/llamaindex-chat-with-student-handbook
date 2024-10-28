@@ -19,7 +19,7 @@ if not openai_api_key:
 else:
     if "messages" not in st.session_state.keys():  # Initialize the chat messages history
         st.session_state.messages = [
-            {"role": "assistant", "content": "I am Ayeong's Copilot, your personal assistant for tax inquiries. You can ask me about Title 26 - Internal Revenue Code ."}
+            {"role": "assistant", "content": "I am Ayeong's Copilot, your personal assistant for IRS tax return for tax year 2023. You can ask me about filing tax returns ."}
         ]
 
     #if 'chat_copilot' in st.session_state.keys():

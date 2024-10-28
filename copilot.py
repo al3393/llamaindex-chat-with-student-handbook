@@ -52,8 +52,8 @@ class Copilot:
 
             The retrived information is: {retrieved_info}
 
-            Please answer the question based on the retrieved information. If the question is not related to US Tax Code, 
-            please tell the user and ask for a question related to US Tax Code.
+            Please answer the question based on the retrieved information. If the question is not related to 2023 US individual tax return, 
+            please tell the user and ask for a question related to tax returns for individuals.
 
             Please highlight the information with bold text and bullet points.
         """
