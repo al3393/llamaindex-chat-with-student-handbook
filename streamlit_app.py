@@ -21,7 +21,8 @@ else:
         st.session_state.messages = [
             {"role": "assistant", "content": "I am Ayeong's Copilot, your personal assistant for tax inquiries. You can ask me about Title 26 - Internal Revenue Code ."}
         ]
-
+        
+    del st.session_state[“chat_copilot”]
     @st.cache_resource
     def load_copilot():
         return Copilot()
