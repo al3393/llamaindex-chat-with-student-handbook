@@ -24,8 +24,9 @@ else:
 
     #if 'chat_copilot' in st.session_state.keys():
 	    #del st.session_state['chat_copilot']
-    print(st.session_state.messages)
-    @st.cache_resource
+    #print(st.session_state.messages)
+    #@st.cache_resource
+    
     def load_copilot():
         return Copilot()
 
